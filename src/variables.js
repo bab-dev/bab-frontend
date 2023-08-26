@@ -3,7 +3,7 @@ const variables = {
   LIGHTNESS: 50,
   RANGE: 10,
 
-  API_URL: "https://localhost:5001/api/",
+  API_URL: "https://bab-bo-api.azurewebsites.net/api/",
   LOGIN_URL: "users/login",
   REFRESH_TOKEN_URL: "token/refresh",
 
