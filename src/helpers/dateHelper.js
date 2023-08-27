@@ -11,7 +11,10 @@ const getActualDate = () => {
 
 const getActualTime = () => {
   let today = new Date();
-  let hour = today.getHours();
+  let hour;
+  if (today.getHours() < 10) hour = "0" + today.getHours();
+  else hour = today.getHours();
+
   let minutes;
   if (today.getMinutes() < 10) minutes = "0" + today.getMinutes();
   else minutes = today.getMinutes();

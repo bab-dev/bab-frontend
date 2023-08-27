@@ -70,7 +70,7 @@ const VolunteerWorkStatisticsTable = ({
                   tabIndex={-1}
                   sx={{ cursor: "pointer" }}
                 >
-                  <TableCell align="left">
+                  <TableCell align="left" sx={{ minWidth: "272px" }}>
                     <Typography color={"black"}>
                       {getVolunteerName(row.IDVolunteer)}
                     </Typography>
