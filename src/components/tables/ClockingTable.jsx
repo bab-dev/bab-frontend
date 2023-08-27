@@ -122,7 +122,7 @@ const ClockingTable = ({
                       {formatDateWithBackslash(row.Date)}
                     </Typography>
                   </TableCell>
-                  <TableCell align="left">
+                  <TableCell align="left" sx={{ minWidth: "272px" }}>
                     <Typography color={"black"}>
                       {getVolunteerName(row.IDVolunteer)}
                     </Typography>
