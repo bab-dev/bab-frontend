@@ -55,8 +55,9 @@ const SignInDialog = () => {
           if (err.response) {
             const { status } = err.response;
             if (status === 401) {
+              setShowAlert(true);
               throw Error("User must be authenticated to proceed.");
-            } else if (status === 400 || status === 401) {
+            } else if (status === 400) {
               setShowAlert(true);
             }
             throw Error(`HTTP error: ${status}`);
