@@ -24,7 +24,7 @@ const SignInDialog = () => {
   const handleClickShowPassword = () => setShowPassword(!showPassword);
 
   const handleHideAlert = () => {
-    setShowAlert(!showAlert);
+    setShowAlert(false);
   };
 
   const getUserData = async (idPerson) => {
@@ -54,6 +54,7 @@ const SignInDialog = () => {
         .catch((err) => {
           if (err.response) {
             const { status } = err.response;
+            console.log("status: --> ", status);
             if (status === 401) {
               setShowAlert(true);
               throw Error("User must be authenticated to proceed.");
@@ -85,6 +86,7 @@ const SignInDialog = () => {
       await getUserData(response.data.IDPerson);
       navigate(`/${variables.HOME_URL}`);
     } catch (error) {
+      setShowAlert(true);
       console.error(`Error: ${error}`);
     }
   };
